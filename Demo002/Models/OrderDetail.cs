@@ -19,6 +19,16 @@ namespace Demo002.Models
         public virtual Product Product { get; set; }
         public virtual Order Order { get; set; }
 
+        public OrderDetail(int quantity, double unitPrice, int productId, int orderId = 1)
+        {
+            Quantity = quantity;
+            UnitPrice = unitPrice;
+            ProductId = productId;
+            OrderId = orderId;
+        }
 
+        public OrderDetail()
+        { 
+        }
     }
 }
